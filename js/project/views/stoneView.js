@@ -1,4 +1,3 @@
-
 APP.StoneView = Backbone.View.extend({    
 
   initialize: function() {  
@@ -10,10 +9,7 @@ APP.StoneView = Backbone.View.extend({
 
     setInterval(function() {
       self._move();
-      if(self._checkPlayerCollision()) {
-        APP.infoLineView.addMessage('Столкновение с астероидом!');
-        //app._gameOver();
-      };      
+      if(self._checkPlayerCollision()) { Backbone.trigger('playerCollStone', self) };      
     }, APP.TIME_UNIT_MS);          
 
     this.listenTo(this.model, 'change', this.render);
@@ -35,8 +31,18 @@ APP.StoneView = Backbone.View.extend({
     return this;
   },
 
-  destroyElem: function() {   
-    this.$el.remove();
+  destroyElem: function(boom) {   
+    if(boom) {
+      this.$el.addClass('boom_1');
+
+      this.$el.animate({opacity: 0}, 1000, function() {
+        this.$el.remove();
+      });      
+    } else {
+      this.$el.remove();
+    };
+
+
   },
 
   _checkPlayerCollision: function() {  

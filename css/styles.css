@@ -66,6 +66,11 @@ body{
 	background-size: cover;
 }
 
+.boom_1{
+	background: url('../images/boom_1.png') center center no-repeat;
+	background-size: cover;	
+}
+
 /****************************************************************************** GLOBAL_blocks: star */
 .star{
 	background: #C1AFAF;
