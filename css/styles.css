@@ -1,0 +1,145 @@
+/*
+INFO: 
+	project: tic tac toe 1
+	browsers: opera/chrome/FF/ie9/safari
+	width: 
+	columns:
+	markup: Sergey Kalinin 05/2016 (prozaik81-2@yandex.ru)
+	use: jq, bootstrap, underscore, backbone
+	desc: 	
+	version 1
+*/	
+
+/****************************************************************************** COMMON_STYLES */
+body{
+	background: #000;
+
+	color: #fff;
+}
+
+.space .hide{
+	display: none !important;
+}
+
+.space .show{
+	display: block !important;
+}
+
+
+
+
+/****************************************************************************** GLOBAL_layout */
+.main_container{
+	width: 900px;
+	overflow: hidden;
+	margin: 20px auto;
+}
+
+.row{
+	padding-bottom: 30px;
+}
+
+
+/****************************************************************************** GLOBAL_blocks: stone */
+.stone{
+	position: absolute;
+	z-index: 0;
+}
+
+.stone_0{
+	background: url('../images/stones/stone_0.png') center center no-repeat;
+	background-size: cover;
+}
+
+.stone_1{
+	background: url('../images/stones/stone_1.png') center center no-repeat;
+	background-size: cover;
+}
+
+.stone_2{
+	background: url('../images/stones/stone_2.png') center center no-repeat;
+	background-size: cover;
+}
+
+.stone_3{
+	background: url('../images/stones/stone_3.png') center center no-repeat;
+	background-size: cover;
+}
+
+/****************************************************************************** GLOBAL_blocks: star */
+.star{
+	background: #C1AFAF;
+	width: 1px;
+	height: 1px;	
+	position: absolute;
+	z-index: 0;
+}
+
+/****************************************************************************** GLOBAL_blocks: player_rocket */
+.player_rocket{
+	background: url('../images/player_rocket.png') left top no-repeat;
+	background-size: contain;
+	width: 20px;
+	height: 10px;	
+	position: absolute;
+	z-index: 100;
+}
+
+/****************************************************************************** GLOBAL_blocks: player */
+.player:focus{
+	outline: none;
+}
+
+.player{
+	background: url('../images/player.png') left top no-repeat;
+	background-size: contain;
+	width: 50px;
+	height: 20px;
+	position: absolute;
+	z-index: 100;
+}
+
+
+/****************************************************************************** GLOBAL_blocks: field */
+.field{
+	width: 100%;
+	border: 1px solid #ccc;	
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+}
+
+
+/****************************************************************************** GLOBAL_blocks: info_line */
+.info_line{
+	width: 100%;
+	border: 1px solid #ccc;	
+	padding: 5px;
+	padding-left: 20px;
+	padding-right: 40px;
+	height: 32px;
+	overflow: hidden;
+}
+
+	.info_message{
+		padding-right: 20px;
+		margin-right: 20px;
+		border-right: 1px solid #521616;
+	}
+
+/****************************************************************************** GLOBAL_blocks: informer */
+.informer_table{
+	width: 100%;
+	border: 1px solid #ccc;
+}
+
+	.informer_table td:first-child{
+		width: 70%;
+	}
+
+	.informer_table td{
+		border: 1px solid #ccc;
+		width: 50%;
+		padding: 5px;
+
+	}
