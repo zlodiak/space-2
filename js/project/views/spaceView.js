@@ -21,9 +21,11 @@ APP.SpaceView = Backbone.View.extend({
       self._setFocus('player');
     });   
 
-    Backbone.on('playerCollStone', function(model) {
+    Backbone.on('playerCollStone', function(stoneModel) { 
       APP.infoLineView.addMessage('Столкновение с астероидом!');
-      model.destroyElem(true);
+      stoneModel.destroyElem(true);
+      APP.playerModel.energyUpdate(-30);
+      APP.playerModel.scoreUpdate(10);
     }); 
 
     console.log('APP.playerRocketCollection')  

@@ -7,7 +7,19 @@ APP.PlayerModel = Backbone.Model.extend({
     score: 0,
     xCoord: 10,
     yCoord: 40    
-  }        
+  },     
+
+  energyUpdate: function(value) { 
+    var energy = this.get('energy');
+    energy += value;
+    this.set({energy: energy});
+  },     
+
+  scoreUpdate: function(value) { 
+    var score = this.get('score');
+    score += value;
+    this.set({score: score});
+  }
 
 });
 
