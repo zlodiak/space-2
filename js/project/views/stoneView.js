@@ -35,14 +35,16 @@ APP.StoneView = Backbone.View.extend({
     if(boom) {
       this.$el.addClass('boom_1');
 
-      this.$el.animate({opacity: 0}, 1000, function() {
+      this.$el.animate({opacity: 0}, APP.BOOM_STONE_TIME_MS, function() {
         this.$el.remove();
+        this.model.destroy();
       });      
     } else {
-      this.$el.remove();
+      this.$el.remove();  
+      this.model.destroy();    
     };
 
-
+    APP.stonesCollection.remove(this.model);
   },
 
   _checkPlayerCollision: function() {  

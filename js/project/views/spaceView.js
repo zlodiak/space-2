@@ -6,6 +6,7 @@ APP.SpaceView = Backbone.View.extend({
     APP.TIME_UNIT_MS = 100;
     APP.STARS_CNT = 100;
     APP.STONES_CNT = 10;
+    APP.BOOM_STONE_TIME_MS = 1000;
 
     this._modelsInitialize();
     this._collectionsInitialize();

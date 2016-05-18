@@ -68,6 +68,7 @@ APP.InfoMessageModel = Backbone.Model.extend({
 APP.StoneModel = Backbone.Model.extend({
   
   defaults: {
+    id: undefined,
     xCoord: undefined,
     yCoord: undefined,
     shapeClass: undefined,
