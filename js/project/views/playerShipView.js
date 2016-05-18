@@ -101,6 +101,6 @@ APP.PlayerShipView = Backbone.View.extend({
       xCoord: xCoordNew, 
       yCoord: yCoordNew
     };
-  }  
+  }   
 
 });

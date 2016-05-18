@@ -107,6 +107,6 @@ APP.PlayerRocketView = Backbone.View.extend({
     });
 
     return result;
-  },        
+  }
 
 });
